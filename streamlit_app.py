@@ -8,7 +8,7 @@ import pandas as pd
 
 # Notion credentials
 notion_token = st.secrets["NOTION_API_TOKEN"]
-database_id = st.secrets["DATABASE_ID"]
+database_id = st.secrets["NOTION_DATABASE_ID"]
 
 notion = Client(auth=notion_token)
 
