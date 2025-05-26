@@ -186,7 +186,7 @@ if st.session_state.get("timeline_ready"):
     if not st.session_state.get("already_sent"):
         if st.button("🚀 Kirim ke Notion"):
             try:
-                push_to_notion(NOTION_API_TOKEN, NOTION_DATABASE_ID, st.session_state["timeline_rows"], st.session_state["start"])
+                push_to_notion(notion_token, database_id, st.session_state["timeline_rows"], st.session_state["start"])
                 st.success("✅ Sukses kirim ke Notion!")
                 st.session_state["already_sent"] = True
             except Exception as e:
