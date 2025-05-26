@@ -7,8 +7,10 @@ import csv
 import pandas as pd
 
 # Notion credentials
-NOTION_API_TOKEN = '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'
-NOTION_DATABASE_ID = '1ff928154818805a94fdfe8fd6f4399f'
+notion_token = st.secrets["NOTION_API_TOKEN"]
+database_id = st.secrets["DATABASE_ID"]
+
+notion = Client(auth=notion_token)
 
 # Libur nasional
 libur_nasional = [parse(t).date() for t in [
